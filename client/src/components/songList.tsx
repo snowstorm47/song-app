@@ -6,7 +6,7 @@ import { RootState } from '../store';
 import { fetchSongsStart, deleteSongStart } from '../store/songSlice';
 import { Song } from '../types/song';
 
-// Update the styled components with proper typing
+
 const Table = styled.table<SpaceProps & LayoutProps>`
   ${space}
   ${layout}
