@@ -58,18 +58,19 @@ const songSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     },
-    deleteSongStart(state) {
-      state.loading = true;
-      state.error = null;
-    },
-    deleteSongSuccess(state, action: PayloadAction<string>) {
-      state.songs = state.songs.filter(song => song._id !== action.payload);
-      state.loading = false;
-    },
-    deleteSongFailure(state, action: PayloadAction<string>) {
-      state.loading = false;
-      state.error = action.payload;
-    },
+    deleteSongStart: (state, action: PayloadAction<string>) => {
+        state.loading = true;
+        state.error = null;
+      },
+      deleteSongSuccess: (state, action: PayloadAction<string>) => {
+        state.songs = state.songs.filter(song => song._id !== action.payload);
+        state.loading = false;
+      },
+      deleteSongFailure: (state, action: PayloadAction<string>) => {
+        state.loading = false;
+        state.error = action.payload;
+      },
+  
     fetchStatisticsStart(state) {
       state.loading = true;
       state.error = null;
